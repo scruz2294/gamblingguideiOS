@@ -96,17 +96,21 @@
         <!--BlackjackReadMe-->
         <scene sceneID="64F-4A-qdx">
             <objects>
-                <viewController title="BlackjackReadMe" id="4O9-bN-lfA" customClass="BlackjackReadMeViewController" customModule="GamblingGuideforiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="BlackjackReadMe" automaticallyAdjustsScrollViewInsets="NO" id="4O9-bN-lfA" customClass="BlackjackReadMeViewController" customModule="GamblingGuideforiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N3g-vZ-PbY"/>
                         <viewControllerLayoutGuide type="bottom" id="Fu5-Qp-ooF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GN3-3k-G5X">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pK-lw-WJT">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pK-lw-WJT">
+                                <rect key="frame" x="0.0" y="20" width="380" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9o8-ZP-cOV"/>
+                                    <constraint firstAttribute="width" constant="380" id="RLu-sr-sFt"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Blackjack Read Me" id="g5S-1w-PLG">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="5wP-dC-JMt">
@@ -122,9 +126,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5t2-E1-bs2">
+                                <rect key="frame" x="0.0" y="64" width="380" height="736"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="Sg2-aa-gJs"/>
+                                    <constraint firstAttribute="width" constant="380" id="Ye8-Q2-ElV"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8pK-lw-WJT" firstAttribute="leading" secondItem="GN3-3k-G5X" secondAttribute="leading" id="4XZ-0u-503"/>
+                            <constraint firstItem="Fu5-Qp-ooF" firstAttribute="top" secondItem="5t2-E1-bs2" secondAttribute="bottom" id="Aeo-Ik-Eu3"/>
+                            <constraint firstAttribute="trailing" secondItem="5t2-E1-bs2" secondAttribute="trailing" id="RbQ-mR-nwg"/>
+                            <constraint firstItem="5t2-E1-bs2" firstAttribute="leading" secondItem="GN3-3k-G5X" secondAttribute="leading" id="Uhh-Ja-vLf"/>
+                            <constraint firstAttribute="trailing" secondItem="8pK-lw-WJT" secondAttribute="trailing" id="kIK-ek-C3k"/>
+                            <constraint firstItem="8pK-lw-WJT" firstAttribute="top" secondItem="N3g-vZ-PbY" secondAttribute="bottom" id="nAb-ay-IMk"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="380" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJW-kb-Y1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xfI-9c-b1a" userLabel="Exit" sceneMemberID="exit"/>
